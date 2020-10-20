@@ -20,7 +20,7 @@ var firebaseConfig = {
           firebase.database().ref("/").child(roomname).update({
                 purpose : "adding roomname"
           });
-          window.location="nwitterpage.html";
+          window.location="nwitter_page.html";
     }
 
 function getData() {firebase.database().ref("/").on('value', function(snapshot) {document.getElementById("output").innerHTML = "";snapshot.forEach(function(childSnapshot) {childKey  = childSnapshot.key;
@@ -36,7 +36,7 @@ getData();
 function redirecttoroomname(name){
       console.log(name);
       localStorage.setItem("roomname",name);
-      window.location="nwitterpage.html";
+      window.location="nwitter_page.html";
 }
 function logout(){
       localStorage.removeItem("username");
